@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>1 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label>
+		Podaj numer dnia tygodnia: <input type="number" id="dzien">
+	</label>
+	
+	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function getDayName()
+		{
+			var dzien = document.getElementById("dzien").value;
+			var dzientyg = "";
+			if(dzien == 1){
+				dzientyg = ("Pierwszy dzień tygodnia to Monday - poniedziałek")
+			}
+			else if(dzien==2){
+				dzientyg = "Drugi dzień tygodnia to Tuesday - wtorek"
+			}
+			else if(dzien==3){
+				dzientyg = "Trzeci dzień tygodnia to Wednesday - środa"
+			}
+			else if(dzien==4){
+				dzientyg = "Czwarty dzień tygodnia to Thursday - czwartek"
+			}
+			else if(dzien==5){
+				dzientyg = "<span style='color:yellow'>Piąty dzień tygodnia to Friday - piątek, piąteczek, piątunio</span>"
+			}
+			else if(dzien==6){
+				dzientyg = "<span style='color:green'>Szósty dzień tygodnia to Saturday - sobota</span>"
+			}
+			else if(dzien==7){
+				dzientyg = "<span style='color:green'>Pierwszy dzień tygodnia to Sunday - niedziela</span>"
+			}
+			else{
+				dzientyg = "<span style='color:red'>TO NIE JEST PRAWIDŁOWY DZIEŃ TYGODNIA!</span>"
+			}				
+			
+		document.getElementById("wynik").innerHTML = dzientyg
+		}
+
+	</script>
+
+</body>
+</html>
